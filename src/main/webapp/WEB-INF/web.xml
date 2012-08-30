@@ -8,7 +8,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			classpath:securityConfig.xml			
+			classpath:applicationContext*.xml			
 		</param-value>
 	</context-param>
 	<!-- Spring Secutiry3.1的过滤器链配置  -->
