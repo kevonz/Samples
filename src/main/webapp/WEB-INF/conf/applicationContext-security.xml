@@ -87,27 +87,6 @@
 	<!-- 资源源数据定义，将所有的资源和权限对应关系建立起来，即定义某一资源可以被哪些角色去访问。11/3/23 -->
 	<b:bean id="customSecurityMetadataSource"
 		class="com.ss.CustomInvocationSecurityMetadataSourceService">
-	</b:bean> 
-
-	
-	
-	
-	
-	
-	<!--
-	<b:bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<b:property name="location">
-			<b:value>classpath:system.properties</b:value>
-		</b:property>
 	</b:bean>
-
-	 <b:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-		destroy-method="close">
-		<b:property name="driverClass" value="${jdbc.driverClassName}" />
-		<b:property name="jdbcUrl" value="${jdbc.url}" />
-		<b:property name="user" value="${jdbc.username}" />
-		<b:property name="password" value="${jdbc.password}" />
-	</b:bean> -->	
 		
 </b:beans>

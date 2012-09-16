@@ -71,6 +71,7 @@ public class CustomInvocationSecurityMetadataSourceService implements
 		for (String auth : query) {
 			ConfigAttribute ca = new SecurityConfig(auth);
 
+			@SuppressWarnings("unchecked")
 			List<String> query1 = session
 					.createSQLQuery(
 							"select b.url "
@@ -121,12 +122,15 @@ public class CustomInvocationSecurityMetadataSourceService implements
         if (firstQuestionMarkIndex != -1) {
             url = url.substring(0, firstQuestionMarkIndex);
         }
-
+        System.out.println("@@@run to this#1");
 		Iterator<String> ite = resourceMap.keySet().iterator();
 
 		while (ite.hasNext()) {
 			String resURL = ite.next();
 			System.out.println("@@@resURL:"+resURL);
+			if(resURL.equalsIgnoreCase(url)){
+				return resourceMap.get(resURL);
+			}
 		/*	if (urlMatcher.pathMatchesUrl(url, resURL)) {
 
 				return resourceMap.get(resURL);
