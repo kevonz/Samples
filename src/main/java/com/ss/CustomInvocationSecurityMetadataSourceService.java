@@ -113,12 +113,9 @@ public class CustomInvocationSecurityMetadataSourceService implements
 	@Override
 	public Collection<ConfigAttribute> getAttributes(Object object)
 			throws IllegalArgumentException {
-
 		// object 是一个URL，被用户请求的url。
-		String url = ((FilterInvocation) object).getRequestUrl();
-		
+		String url = ((FilterInvocation) object).getRequestUrl();		
         int firstQuestionMarkIndex = url.indexOf("?");
-
         if (firstQuestionMarkIndex != -1) {
             url = url.substring(0, firstQuestionMarkIndex);
         }
@@ -136,7 +133,6 @@ public class CustomInvocationSecurityMetadataSourceService implements
 				return resourceMap.get(resURL);
 			}*/
 		}
-
 		return null;
 	}
 
